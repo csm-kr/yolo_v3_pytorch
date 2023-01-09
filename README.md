@@ -49,7 +49,7 @@ Random crop
 |papers         | COCOtrain2017          |  COCO test-dev         | 416 x 416  |  31.0   |55.3   |34.4    |34.48 |
 |our repo       | COCOtrain2017          |  COCOval2017(minival)  | 416 x 416  |**32.5** |54.3   |34.1    |**35.79**|
 
-best epoch : 264, demo(i080ti) 
+best epoch : 264, demo(1080ti) 
 
 ```
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.325
