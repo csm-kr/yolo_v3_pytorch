@@ -28,13 +28,28 @@ Random crop
 - scheduler : step LR (min : 5e-5)
 ```
 
+### Scheduler
 
-|methods        | Traning Dataset        |    Testing Dataset     | Resolution | AP      |AP50   |AP75    | Time | Fps  |
-|---------------|------------------------| ---------------------- | ---------- | ------- |-------|--------|:----:| ---- |
-|papers         | COCOtrain2017          |  COCO test-dev         | 416 x 416  |  31.0   |55.3   |34.4    |29    |34.48 |
-|our repo       | COCOtrain2017          |  COCOval2017(minival)  | 416 x 416  |**32.5** |54.3   |34.1    |**26.45**|**37.81**|
+- we use step LR scheduler and learning rate warmup(burning) scheme 
+1833 x 218 = 399594
+1833 x 246 = 450918
+1833 x 273 = 500409
 
-264 epoch 기준
+### burn-in
+
+- batch 64 & iteration 4000
+- lr : 0 to 1e-3 (i/4000)
+
+### Results
+
+- quantitative results
+
+|methods        | Traning Dataset        |    Testing Dataset     | Resolution | AP      |AP50   |AP75    | Fps  |
+|---------------|------------------------| ---------------------- | ---------- | ------- |-------|--------| ---- |
+|papers         | COCOtrain2017          |  COCO test-dev         | 416 x 416  |  31.0   |55.3   |34.4    |34.48 |
+|our repo       | COCOtrain2017          |  COCOval2017(minival)  | 416 x 416  |**32.5** |54.3   |34.1    |**35.79**|
+
+best epoch : 264, demo(i080ti) 
 
 ```
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.325
@@ -51,22 +66,10 @@ Random crop
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.593
 ```
 
-### Scheduler
+- qualitative results
 
-- we use step LR scheduler and learning rate warmup(burning) scheme 
-1833 x 218 = 399594
-1833 x 246 = 450918
-1833 x 273 = 500409
-
-### burn-in
-
-- batch 64 & iteration 4000
-- lr : 0 to 1e-3 (i/4000)
-
-### training
-
-- batch : 64
-- scheduler : step LR
-- loss : sse + bce
-- dataset : coco
-- epoch : 273
+![image](https://user-images.githubusercontent.com/18729104/211263016-4c1c3efa-fcc1-477c-b639-97dd076ea05a.png)
+![image](https://user-images.githubusercontent.com/18729104/211263051-86b71fce-0c68-4b12-bc82-bafb339421ca.png)
+![image](https://user-images.githubusercontent.com/18729104/211263100-d5c5c52c-ea8b-480f-a67c-995d1672fdd7.png)
+![image](https://user-images.githubusercontent.com/18729104/211263401-2eed358c-fbaf-4b4b-912b-a02a04d5328b.png)
+![image](https://user-images.githubusercontent.com/18729104/211263433-c2481f31-43a4-4868-a737-a646baad4bf8.png)
