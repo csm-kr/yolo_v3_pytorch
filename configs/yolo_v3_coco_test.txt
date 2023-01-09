@@ -1,0 +1,14 @@
+## name
+name = yolo_v3_coco_v1
+
+## visdom
+## data
+data_root = D:\data\coco
+data_type = coco
+
+## train
+## test
+test_epoch = 'best'
+## demo
+## distributed
+gpu_ids = [0]
