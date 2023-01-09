@@ -68,8 +68,6 @@ best epoch : 264, demo(i080ti)
 
 - qualitative results
 
-![image](https://user-images.githubusercontent.com/18729104/211263016-4c1c3efa-fcc1-477c-b639-97dd076ea05a.png)
 ![image](https://user-images.githubusercontent.com/18729104/211263051-86b71fce-0c68-4b12-bc82-bafb339421ca.png)
 ![image](https://user-images.githubusercontent.com/18729104/211263100-d5c5c52c-ea8b-480f-a67c-995d1672fdd7.png)
-![image](https://user-images.githubusercontent.com/18729104/211263401-2eed358c-fbaf-4b4b-912b-a02a04d5328b.png)
 ![image](https://user-images.githubusercontent.com/18729104/211263433-c2481f31-43a4-4868-a737-a646baad4bf8.png)
