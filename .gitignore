@@ -13,7 +13,7 @@ pretrained/
 voc/
 save/
 saves/
-./saves/
+./saves
 logs/
 pred/
 gt/
