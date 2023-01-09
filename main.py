@@ -106,7 +106,7 @@ def main_worker(rank, opts):
 if __name__ == "__main__":
     import configargparse
     from config import get_args_parser
-    parser = configargparse.ArgumentParser('YOLOv3 train', parents=[get_args_parser()])
+    parser = configargparse.ArgumentParser('yolo v3 train', parents=[get_args_parser()])
     opts = parser.parse_args()
 
     if len(opts.gpu_ids) > 1:

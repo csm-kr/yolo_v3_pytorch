@@ -149,7 +149,7 @@ if __name__ == '__main__':
 
     import configargparse
     from config import get_args_parser
-    parser = configargparse.ArgumentParser('YOLO v3 test', parents=[get_args_parser()])
+    parser = configargparse.ArgumentParser('yolo v3 test', parents=[get_args_parser()])
     opts = parser.parse_args()
 
     opts.world_size = len(opts.gpu_ids)
