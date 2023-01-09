@@ -34,7 +34,7 @@ def get_args_parser():
     parser.add_argument('--momentum', type=float, default=0.9)
     parser.add_argument('--save_dir', type=str, default='./.saves')
     parser.add_argument('--start_epoch', type=int, default=0)
-    parser.add_argument('--save_epoch', type=int, default=5)
+    parser.add_argument('--save_epoch', type=int, default=300)
 
     # test
     parser.add_argument('--test_epoch', type=str, default='best')
